@@ -1,9 +1,12 @@
 package io.github.akjo03.genixbot.model.config;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;
 
+@Builder
 @NoArgsConstructor
 @Getter
 @Setter
@@ -23,4 +26,15 @@ public class BotConfigServer {
 	@JsonSerialize
 	@JsonDeserialize
 	private BotConfigServerVoiceChannels voiceChannels;
+
+	@JsonCreator
+	public BotConfigServer(
+			@JsonProperty("id") String id,
+			@JsonProperty("textChannels") BotConfigServerTextChannels textChannels,
+			@JsonProperty("voiceChannels") BotConfigServerVoiceChannels voiceChannels
+	) {
+		this.id = id;
+		this.textChannels = textChannels;
+		this.voiceChannels = voiceChannels;
+	}
 }
