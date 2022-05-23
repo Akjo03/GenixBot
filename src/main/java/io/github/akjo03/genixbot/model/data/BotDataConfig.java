@@ -16,11 +16,11 @@ import lombok.*;
 public class BotDataConfig {
 	@JsonSerialize
 	@JsonDeserialize
-	private String twitchUserName;
+	private String twitchUserName = "letsgenix";
 
 	@JsonSerialize
 	@JsonDeserialize
-	private String discordCommandPrefix;
+	private String discordCommandPrefix = "!";
 
 	@JsonCreator
 	public BotDataConfig(

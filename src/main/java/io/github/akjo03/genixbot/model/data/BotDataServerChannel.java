@@ -6,8 +6,9 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.github.akjo03.genixbot.model.util.DiscordChannelType;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @Getter
 @Setter

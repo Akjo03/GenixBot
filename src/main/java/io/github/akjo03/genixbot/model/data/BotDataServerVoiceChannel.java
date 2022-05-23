@@ -3,12 +3,9 @@ package io.github.akjo03.genixbot.model.data;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.github.akjo03.genixbot.model.util.DiscordVoiceChannelType;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@Getter
-@Setter
+@SuperBuilder
 @ToString
 @SuppressWarnings("unused")
 public class BotDataServerVoiceChannel extends BotDataServerChannel<DiscordVoiceChannelType> {

@@ -24,14 +24,20 @@ public class BotConfigServer {
 	@JsonDeserialize
 	private BotConfigServerVoiceChannels voiceChannels;
 
+	@JsonSerialize
+	@JsonDeserialize
+	private BotConfigServerRoles roles;
+
 	@JsonCreator
 	public BotConfigServer(
 			@JsonProperty("id") String id,
 			@JsonProperty("textChannels") BotConfigServerTextChannels textChannels,
-			@JsonProperty("voiceChannels") BotConfigServerVoiceChannels voiceChannels
+			@JsonProperty("voiceChannels") BotConfigServerVoiceChannels voiceChannels,
+			@JsonProperty("roles") BotConfigServerRoles roles
 	) {
 		this.id = id;
 		this.textChannels = textChannels;
 		this.voiceChannels = voiceChannels;
+		this.roles = roles;
 	}
 }

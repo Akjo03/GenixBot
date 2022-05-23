@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Run GenixBot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <option name="ACTIVE_PROFILES" value="local" />
+    <option name="ACTIVE_PROFILES" />
     <module name="GenixBot" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.akjo03.genixbot.GenixBot" />
     <method v="2">
