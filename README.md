@@ -1,4 +1,3 @@
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/downloads-pre/Akjo03/GenixBot/latest/total?label=Downloads&style=flat-square)
 ![GitHub](https://img.shields.io/github/license/Akjo03/GenixBot?label=License&style=flat-square)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/Akjo03/GenixBot?label=Code%20Quality&style=flat-square)
 ![Lines of code](https://img.shields.io/tokei/lines/github/Akjo03/GenixBot?label=Lines%20Of%20Code&style=flat-square)
