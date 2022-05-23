@@ -8,10 +8,8 @@ import lombok.*;
 
 import java.util.List;
 
-@Builder
 @NoArgsConstructor
 @Getter
-@Setter
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @SuppressWarnings("unused")
