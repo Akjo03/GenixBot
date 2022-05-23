@@ -1,15 +1,16 @@
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/downloads-pre/Akjo03/PROJECT_NAME/latest/total?label=Downloads&style=flat-square)
-![GitHub](https://img.shields.io/github/license/Akjo04/PROJECT_NAME?label=License&style=flat-square)
-![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/Akjo03/PROJECT_NAME?label=Code%20Quality&style=flat-square)
-![Lines of code](https://img.shields.io/tokei/lines/github/Akjo03/PROJECT_NAME?label=Lines%20Of%20Code&style=flat-square)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/downloads-pre/Akjo03/GenixBot/latest/total?label=Downloads&style=flat-square)
+![GitHub](https://img.shields.io/github/license/Akjo03/GenixBot?label=License&style=flat-square)
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/Akjo03/GenixBot?label=Code%20Quality&style=flat-square)
+![Lines of code](https://img.shields.io/tokei/lines/github/Akjo03/GenixBot?label=Lines%20Of%20Code&style=flat-square)
 
-# Project Title
+# GenixBot
 
-Project Description
+A discord bot made for the german streamer LetsGenix.
 
 ## Used Technologies
 
 - Java 17
+- Spring Boot 2
 - Maven 3.8.1
 
 -----
@@ -22,4 +23,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 * **Lukas Küffer** - *Initial work* - [Akjo03](https://github.com/Akjo03)
 
-See also the list of [contributors](https://github.com/Akjo03/PROJECT_NAME/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Akjo03/GenixBot/contributors) who participated in this project.

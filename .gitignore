@@ -2,3 +2,6 @@
 !.idea/runConfigurations/
 /out/
 *.iml
+/.env
+/data/
+/build/

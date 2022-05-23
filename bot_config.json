@@ -1,0 +1,116 @@
+{
+    "servers": {
+        "mainServer": {
+            "id": "764239860873560084",
+            "textChannels": {
+                "welcomeChannel": "779702350310801418",
+                "rulesChannel": "764480325535006731",
+                "announcementsChannel": "773306020259692614",
+                "twitchAnnouncementsChannel": "944341539683991582",
+                "youtubeAnnouncementsChannel": "764485161625583617",
+                "instaAnnouncementsChannel": "829094848321421312",
+                "twitchClipsChannel": "764569062251692043",
+                "adminChannel": "764480448562331680",
+                "auditLogChannel": "764480471773347840",
+                "botLogChannel": null,
+                "maintenanceInfoChannel": null,
+                "maintenanceChatChannel": null
+            },
+            "voiceChannels": {
+                "liveTalkChannel": null,
+                "afkChannel": "779722175992299530",
+                "musicChannel": null
+            },
+            "roles": {
+                "genixRole": "764480692154269728",
+                "akjoRole": "779017195564302378",
+                "adminRole": "764243712749469716",
+                "botRole": "764250709142536203",
+                "discordModRole": "815320532845199370",
+                "twitchModRole": null,
+                "boosterRole": "842535826189189132",
+                "twichSubTier3Role": "947234797741297717",
+                "twichSubTier2Role": "947234797741297716",
+                "twichSubTier1Role": "947234797741297715",
+                "twichSubRole": "947234797741297714",
+                "twitchVipRole": "764243246581809152",
+                "generalRole": "764242138498072646",
+                "liveTalkRole": null,
+                "muteRole": null,
+                "maintenanceRole": null
+            }
+        },
+        "testServer": {
+            "id": "689480239742582863",
+            "textChannels": {
+                "welcomeChannel": "689480239742583000",
+                "rulesChannel": "689487320709070918",
+                "announcementsChannel": "689490140342648867",
+                "twitchAnnouncementsChannel": "689490076576907343",
+                "youtubeAnnouncementsChannel": "689490104426823697",
+                "instaAnnouncementsChannel": "689490140342648867",
+                "twitchClipsChannel": "689490140342648867",
+                "adminChannel": "833414199031365682",
+                "auditLogChannel": "689492625631608851",
+                "botLogChannel": "833024890167885844",
+                "maintenanceInfoChannel": "832764164992532520",
+                "maintenanceChatChannel": "832764184806031399"
+            },
+            "voiceChannels": {
+                "liveTalkChannel": "689556719558459435",
+                "afkChannel": "978221792600674315",
+                "musicChannel": "978221900109066240"
+            },
+            "roles": {
+                "genixRole": "689480943626747955",
+                "akjoRole": "689480943626747955",
+                "adminRole": "689480943626747955",
+                "botRole": "689491682089238534",
+                "discordModRole": "689486120848982182",
+                "twitchModRole": "978222153856081980",
+                "boosterRole": "978222513383419904",
+                "twichSubTier3Role": "833414407832469674",
+                "twichSubTier2Role": "833414337741848639",
+                "twichSubTier1Role": "833414311199375370",
+                "twichSubRole": "978222478549717033",
+                "twitchVipRole": "689481080008343605",
+                "generalRole": "689480782850556011",
+                "liveTalkRole": "978222764320243772",
+                "muteRole": "978222906523934720",
+                "maintenanceRole": "832766853742854164"
+            }
+        }
+    },
+    "checks": [
+        {
+            "name": "twitch_live_check",
+            "enabled": true,
+            "interval": 20000
+        },
+        {
+            "name": "twitch_clip_check",
+            "enabled": true,
+            "interval": 20000
+        }
+    ],
+    "commands": [
+        {
+            "name": "shutdown",
+            "enabled": true,
+            "allowedRoles": [
+                "genixRole",
+                "akjoRole",
+                "adminRole"
+            ],
+            "allowedChannels": [
+               "adminChannel" 
+            ]
+        }
+    ],
+    "discord": {
+        "commandPrefix": "!"
+    },
+    "twitch": {
+        "twitchUserName": "letsgenix"
+    }
+}
