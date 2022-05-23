@@ -1,16 +1,21 @@
-package io.github.akjo03.genixbot.model.config;
+package io.github.akjo03.genixbot.model.data;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import io.github.akjo03.genixbot.model.util.DiscordRoleType;
 import lombok.*;
 
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
+@Setter
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @SuppressWarnings("unused")
-public class BotConfigServer {
+public class BotDataServerRole {
 	@JsonSerialize
 	@JsonDeserialize
 	@EqualsAndHashCode.Include
@@ -18,20 +23,20 @@ public class BotConfigServer {
 
 	@JsonSerialize
 	@JsonDeserialize
-	private BotConfigServerTextChannels textChannels;
+	private String name;
 
 	@JsonSerialize
 	@JsonDeserialize
-	private BotConfigServerVoiceChannels voiceChannels;
+	private DiscordRoleType roleType;
 
 	@JsonCreator
-	public BotConfigServer(
+	public BotDataServerRole(
 			@JsonProperty("id") String id,
-			@JsonProperty("textChannels") BotConfigServerTextChannels textChannels,
-			@JsonProperty("voiceChannels") BotConfigServerVoiceChannels voiceChannels
+			@JsonProperty("name") String name,
+			@JsonProperty("roleType") String roleType
 	) {
 		this.id = id;
-		this.textChannels = textChannels;
-		this.voiceChannels = voiceChannels;
+		this.name = name;
+		this.roleType = DiscordRoleType.fromKey(roleType);
 	}
 }

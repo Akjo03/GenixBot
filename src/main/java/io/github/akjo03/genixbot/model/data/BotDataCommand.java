@@ -1,4 +1,4 @@
-package io.github.akjo03.genixbot.model.config;
+package io.github.akjo03.genixbot.model.data;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,11 +8,14 @@ import lombok.*;
 
 import java.util.List;
 
+@Builder
+@NoArgsConstructor
 @Getter
+@Setter
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @SuppressWarnings("unused")
-public class BotConfigCommand {
+public class BotDataCommand {
 	@JsonSerialize
 	@JsonDeserialize
 	@EqualsAndHashCode.Include
@@ -32,7 +35,7 @@ public class BotConfigCommand {
 
 	@JsonSerialize
 	@JsonDeserialize
-	private List<BotConfigCommandArgument> arguments;
+	private List<BotDataCommandArgument> arguments;
 
 	@JsonSerialize
 	@JsonDeserialize
@@ -43,12 +46,12 @@ public class BotConfigCommand {
 	private List<String> allowedChannels;
 
 	@JsonCreator
-	public BotConfigCommand(
+	public BotDataCommand(
 			@JsonProperty("name") String name,
 			@JsonProperty("description") String description,
 			@JsonProperty("enabled") boolean enabled,
 			@JsonProperty("aliases") List<String> aliases,
-			@JsonProperty("arguments") List<BotConfigCommandArgument> arguments,
+			@JsonProperty("arguments") List<BotDataCommandArgument> arguments,
 			@JsonProperty("allowedRoles") List<String> allowedRoles,
 			@JsonProperty("allowedChannels") List<String> allowedChannels
 	) {

@@ -96,14 +96,26 @@
     "commands": [
         {
             "name": "shutdown",
+            "description": "Fährt den GenixBot herunter",
             "enabled": true,
+            "aliases": [],
+            "arguments": [
+                {
+                    "name": "delay",
+                    "description": "Anzahl Millisekunden bevor GenixBot herunterfahren soll",
+                    "required": false,
+                    "dataType": "int",
+                    "defaultValue": "0",
+                    "allowedValues": null
+                }
+            ],
             "allowedRoles": [
                 "genixRole",
                 "akjoRole",
                 "adminRole"
             ],
             "allowedChannels": [
-               "adminChannel" 
+                "adminChannel"
             ]
         }
     ],

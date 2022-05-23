@@ -1,4 +1,4 @@
-package io.github.akjo03.genixbot.model.config;
+package io.github.akjo03.genixbot.model.data;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -6,25 +6,29 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;
 
+@Builder
+@NoArgsConstructor
 @Getter
+@Setter
 @ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @SuppressWarnings("unused")
-public class BotConfigServers {
+public class BotDataCheck {
 	@JsonSerialize
 	@JsonDeserialize
-	private BotConfigServer mainServer;
+	@EqualsAndHashCode.Include
+	private String name;
 
 	@JsonSerialize
 	@JsonDeserialize
-	private BotConfigServer testServer;
+	private boolean enabled;
 
 	@JsonCreator
-	public BotConfigServers(
-			@JsonProperty("mainServer") BotConfigServer mainServer,
-			@JsonProperty("testServer") BotConfigServer testServer
+	public BotDataCheck(
+			@JsonProperty("name") String name,
+			@JsonProperty("enabled") boolean enabled
 	) {
-		this.mainServer = mainServer;
-		this.testServer = testServer;
+		this.name = name;
+		this.enabled = enabled;
 	}
 }

@@ -1,16 +1,21 @@
-package io.github.akjo03.genixbot.model.config;
+package io.github.akjo03.genixbot.model.data;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import io.github.akjo03.genixbot.model.util.DiscordEventType;
 import lombok.*;
 
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
+@Setter
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @SuppressWarnings("unused")
-public class BotConfigCheck {
+public class BotDataListener {
 	@JsonSerialize
 	@JsonDeserialize
 	@EqualsAndHashCode.Include
@@ -18,20 +23,20 @@ public class BotConfigCheck {
 
 	@JsonSerialize
 	@JsonDeserialize
-	private boolean enabled;
+	private DiscordEventType eventType;
 
 	@JsonSerialize
 	@JsonDeserialize
-	private long interval;
+	private boolean enabled;
 
 	@JsonCreator
-	public BotConfigCheck(
+	public BotDataListener(
 			@JsonProperty("name") String name,
-			@JsonProperty("enabled") boolean enabled,
-			@JsonProperty("interval") long interval
+			@JsonProperty("eventType") String eventType,
+			@JsonProperty("enabled") boolean enabled
 	) {
 		this.name = name;
+		this.eventType = DiscordEventType.fromClassName(eventType);
 		this.enabled = enabled;
-		this.interval = interval;
 	}
 }

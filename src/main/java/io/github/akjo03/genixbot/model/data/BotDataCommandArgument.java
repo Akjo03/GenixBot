@@ -1,4 +1,4 @@
-package io.github.akjo03.genixbot.model.config;
+package io.github.akjo03.genixbot.model.data;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,11 +8,14 @@ import lombok.*;
 
 import java.util.List;
 
+@Builder
+@NoArgsConstructor
 @Getter
+@Setter
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @SuppressWarnings("unused")
-public class BotConfigCommand {
+public class BotDataCommandArgument {
 	@JsonSerialize
 	@JsonDeserialize
 	@EqualsAndHashCode.Include
@@ -24,40 +27,34 @@ public class BotConfigCommand {
 
 	@JsonSerialize
 	@JsonDeserialize
-	private boolean enabled;
+	private boolean required;
 
 	@JsonSerialize
 	@JsonDeserialize
-	private List<String> aliases;
+	private String dataType;
 
 	@JsonSerialize
 	@JsonDeserialize
-	private List<BotConfigCommandArgument> arguments;
+	private String defaultValue;
 
 	@JsonSerialize
 	@JsonDeserialize
-	private List<String> allowedRoles;
-
-	@JsonSerialize
-	@JsonDeserialize
-	private List<String> allowedChannels;
+	private List<String> allowedValues;
 
 	@JsonCreator
-	public BotConfigCommand(
+	public BotDataCommandArgument(
 			@JsonProperty("name") String name,
 			@JsonProperty("description") String description,
-			@JsonProperty("enabled") boolean enabled,
-			@JsonProperty("aliases") List<String> aliases,
-			@JsonProperty("arguments") List<BotConfigCommandArgument> arguments,
-			@JsonProperty("allowedRoles") List<String> allowedRoles,
-			@JsonProperty("allowedChannels") List<String> allowedChannels
+			@JsonProperty("required") boolean required,
+			@JsonProperty("dataType") String dataType,
+			@JsonProperty("defaultValue") String defaultValue,
+			@JsonProperty("allowedValues") List<String> allowedValues
 	) {
 		this.name = name;
 		this.description = description;
-		this.enabled = enabled;
-		this.aliases = aliases;
-		this.arguments = arguments;
-		this.allowedRoles = allowedRoles;
-		this.allowedChannels = allowedChannels;
+		this.required = required;
+		this.dataType = dataType;
+		this.defaultValue = defaultValue;
+		this.allowedValues = allowedValues;
 	}
 }
