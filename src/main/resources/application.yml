@@ -1,8 +1,11 @@
 spring:
   application:
     name: GenixBot
-  main:
-    web-application-type: none
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
 jda:
   token: ${BOT_TOKEN}
 twitch:
