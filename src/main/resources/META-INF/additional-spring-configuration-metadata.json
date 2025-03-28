@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "jda.token",
+      "type": "java.lang.String",
+      "description": "The token for the Discord bot."
+    },
+    {
+      "name": "twitch.client_id",
+      "type": "java.lang.String",
+      "description": "The client id for the Twitch API."
+    },
+    {
+      "name": "twitch.client_secret",
+      "type": "java.lang.String",
+      "description": "The client secret for the Twitch API."
+    }
+  ]
+}

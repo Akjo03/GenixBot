@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: GenixBot
+  main:
+    web-application-type: none
+jda:
+  token: ${BOT_TOKEN}
+twitch:
+  client_id: ${TWITCH_CLIENT_ID}
+  client_secret: ${TWITCH_CLIENT_SECRET}
