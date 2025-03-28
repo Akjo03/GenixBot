@@ -1,6 +1,8 @@
 spring:
   application:
     name: GenixBot
+  main:
+    lazy-initialization: true
 server:
   port: 8080
   error:
