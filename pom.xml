@@ -26,7 +26,7 @@
         <jda.version>5.3.0</jda.version>
         <jetbrains.annotations.version>26.0.2</jetbrains.annotations.version>
         <purefun.version>5.1</purefun.version>
-        <twitch4j.version>1.24.0</twitch4j.version>
+        <twitch4j.version>1.25.0</twitch4j.version>
     </properties>
 
     <dependencies>
