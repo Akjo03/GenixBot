@@ -13,3 +13,15 @@ jda:
 twitch:
   client_id: ${TWITCH_CLIENT_ID}
   client_secret: ${TWITCH_CLIENT_SECRET}
+logging:
+  level:
+    org:
+      apache:
+        catalina:
+          core: error
+      springframework:
+        web: warn
+        boot:
+    net:
+      dv8tion:
+        jda: warn
