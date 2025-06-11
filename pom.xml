@@ -23,7 +23,7 @@
 
         <main.class>com.akjostudios.genix.bot.GenixBotApp</main.class>
 
-        <jda.version>5.3.0</jda.version>
+        <jda.version>5.6.1</jda.version>
         <jetbrains.annotations.version>26.0.2</jetbrains.annotations.version>
         <purefun.version>5.1</purefun.version>
         <twitch4j.version>1.25.0</twitch4j.version>
