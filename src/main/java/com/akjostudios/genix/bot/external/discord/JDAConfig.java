@@ -14,10 +14,10 @@ public class JDAConfig {
     private final JDAProperties properties;
 
     @Bean
-    public @NotNull JDA jda() {
+    public @NotNull JDA jda() throws InterruptedException {
         return JDABuilder.create(
                 properties.getToken(),
                 GatewayIntent.getIntents(GatewayIntent.ALL_INTENTS)
-        ).build();
+        ).build().awaitReady();
     }
 }
